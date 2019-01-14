@@ -3,38 +3,38 @@
     font-size: $font-small;
     padding-bottom: 5px;
 
-    .contact__phone,
-    .contact__email {
-        display: inline-block;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-        padding: 10px;
-    }
-
     .minibar__contacts {
         text-align: center;
+
+        .contact__phone,
+        .contact__email {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 10px;
+        }
     }
 
     .minibar__socials {
         text-align: center;
         display: flex;
         justify-content: space-around;
-    }
 
-    .social__link {
-        font-size: $font-middle;
-        color: $dark-blue;
-        width: 30px;
-        height: 30px;
-        background-color: #fff;
-        border-radius: 50%;
-        position: relative;
-        transition: .5s;
-    }
+        .social__link {
+            font-size: $font-middle;
+            color: $dark-blue;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: relative;
+            transition: .5s;
 
-    .social__icon {
-        @include centerAbsolute;
+            .social__icon {
+                @include centerAbsolute;
+            }
+        }
     }
 
     @media(min-width:520px) {
@@ -55,5 +55,4 @@
             color: white;
         }
     }
-
 }

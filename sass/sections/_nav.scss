@@ -15,34 +15,34 @@
         height: 0;
         width: 100%;
         transition: .4s;
-    }
 
-    .main-navbar__nav.active {
-        height: 100%;
-    }
+        &.active {
+            height: 100%;
+        }
 
-    .nav__list {
-        display: none;
-        list-style-type: none;
-    }
+        .nav__list {
+            display: none;
+            list-style-type: none;
 
-    .nav__list.active {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
+            &.active {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
 
-    .nav__item {
-        padding: 10px 20px;
-    }
+            .nav__item {
+                padding: 10px 20px;
 
-    .nav__link {
-        text-decoration: none;
-        color: black;
-        font-size: $font-big;
-        font-weight: bold;
+                .nav__link {
+                    text-decoration: none;
+                    color: black;
+                    font-size: $font-big;
+                    font-weight: bold;
+                }
+            }
+        }
     }
 
     .main-navbar__hamburger {
@@ -56,46 +56,47 @@
         cursor: pointer;
         overflow: hidden;
         z-index: 1;
-    }
 
-    .hamburger__item {
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        border-radius: 5px;
-        background-color: black;
-        transition: top .2s, transform .2s, left .2s;
-    }
+        .hamburger__item {
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            border-radius: 5px;
+            background-color: black;
+            transition: top .2s, transform .2s, left .2s;
+        }
 
-    .hamburger__item--first {
-        top: 0;
-        left: 0;
-    }
+        .hamburger__item--first {
+            top: 0;
+            left: 0;
 
-    .hamburger__item--second {
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-    }
+            &.active {
+                top: calc(50% - 4px);
+                transform: rotate(45deg);
+            }
+        }
 
-    .hamburger__item--third {
-        bottom: 0;
-        left: 0;
-    }
+        .hamburger__item--second {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
 
-    .hamburger__item--first.active {
-        top: calc(50% - 4px);
-        transform: rotate(45deg);
-    }
+            &.active {
+                left: 50px;
+                opacity: 0;
+            }
+        }
 
-    .hamburger__item--second.active {
-        left: 50px;
-        opacity: 0;
-    }
+        .hamburger__item--third {
+            bottom: 0;
+            left: 0;
 
-    .hamburger__item--third.active {
-        top: calc(50% - 4px);
-        transform: rotate(-45deg);
+            &.active {
+                top: calc(50% - 4px);
+                transform: rotate(-45deg);
+            }
+        }
+
     }
 
 
@@ -108,10 +109,10 @@
     @media (orientation: landscape) {
         .nav__item {
             padding: 5px 20px;
-        }
 
-        .nav__link {
-            font-size: $font-middle;
+            .nav__link {
+                font-size: $font-middle;
+            }
         }
     }
 
@@ -126,44 +127,43 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-        }
 
-        .nav__list {
-            display: flex;
-        }
+            .nav__list {
+                display: flex;
 
-        .nav__link {
-            text-transform: uppercase;
-            font-size: $font-small;
-            padding: 5px;
-            transition: .3s;
+                .nav__item {
+                    position: relative;
 
-        }
+                    .nav__link {
+                        text-transform: uppercase;
+                        font-size: $font-small;
+                        padding: 5px;
+                        transition: .3s;
 
-        .nav__item {
-            position: relative;
+                        &:hover {
+                            color: $red;
+                        }
 
-        }
+                    }
 
-        .nav__item:after {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 0;
-            width: 0;
-            height: 3px;
-            bottom: 0;
-            background-color: $red;
-            transition: .3s;
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        width: 0;
+                        height: 3px;
+                        bottom: 0;
+                        background-color: $red;
+                        transition: .3s;
+                    }
 
-        }
+                    &:hover:after {
+                        width: 100%;
+                    }
+                }
 
-        .nav__item:hover:after {
-            width: 100%;
-        }
-
-        .nav__link:hover {
-            color: $red;
+            }
         }
     }
 }

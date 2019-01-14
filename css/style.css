@@ -30,17 +30,17 @@ section {
   padding-bottom: 5px;
 }
 
-.minibar .contact__phone,
-.minibar .contact__email {
+.minibar .minibar__contacts {
+  text-align: center;
+}
+
+.minibar .minibar__contacts .contact__phone,
+.minibar .minibar__contacts .contact__email {
   display: inline-block;
   color: white;
   text-decoration: none;
   text-align: center;
   padding: 10px;
-}
-
-.minibar .minibar__contacts {
-  text-align: center;
 }
 
 .minibar .minibar__socials {
@@ -52,7 +52,7 @@ section {
       justify-content: space-around;
 }
 
-.minibar .social__link {
+.minibar .minibar__socials .social__link {
   font-size: 2.2rem;
   color: #1975D1;
   width: 30px;
@@ -64,7 +64,7 @@ section {
   transition: .5s;
 }
 
-.minibar .social__icon {
+.minibar .minibar__socials .social__link .social__icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -124,12 +124,12 @@ section {
   height: 100%;
 }
 
-.main-navbar .nav__list {
+.main-navbar .main-navbar__nav .nav__list {
   display: none;
   list-style-type: none;
 }
 
-.main-navbar .nav__list.active {
+.main-navbar .main-navbar__nav .nav__list.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,11 +146,11 @@ section {
   height: 100%;
 }
 
-.main-navbar .nav__item {
+.main-navbar .main-navbar__nav .nav__list .nav__item {
   padding: 10px 20px;
 }
 
-.main-navbar .nav__link {
+.main-navbar .main-navbar__nav .nav__list .nav__item .nav__link {
   text-decoration: none;
   color: black;
   font-size: 2.8rem;
@@ -170,7 +170,7 @@ section {
   z-index: 1;
 }
 
-.main-navbar .hamburger__item {
+.main-navbar .main-navbar__hamburger .hamburger__item {
   position: absolute;
   width: 100%;
   height: 3px;
@@ -182,35 +182,35 @@ section {
   transition: top .2s, transform .2s, left .2s, -webkit-transform .2s;
 }
 
-.main-navbar .hamburger__item--first {
+.main-navbar .main-navbar__hamburger .hamburger__item--first {
   top: 0;
   left: 0;
 }
 
-.main-navbar .hamburger__item--second {
+.main-navbar .main-navbar__hamburger .hamburger__item--first.active {
+  top: calc(50% - 4px);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.main-navbar .main-navbar__hamburger .hamburger__item--second {
   top: 50%;
   left: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
-.main-navbar .hamburger__item--third {
-  bottom: 0;
-  left: 0;
-}
-
-.main-navbar .hamburger__item--first.active {
-  top: calc(50% - 4px);
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.main-navbar .hamburger__item--second.active {
+.main-navbar .main-navbar__hamburger .hamburger__item--second.active {
   left: 50px;
   opacity: 0;
 }
 
-.main-navbar .hamburger__item--third.active {
+.main-navbar .main-navbar__hamburger .hamburger__item--third {
+  bottom: 0;
+  left: 0;
+}
+
+.main-navbar .main-navbar__hamburger .hamburger__item--third.active {
   top: calc(50% - 4px);
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -226,7 +226,7 @@ section {
   .main-navbar .nav__item {
     padding: 5px 20px;
   }
-  .main-navbar .nav__link {
+  .main-navbar .nav__item .nav__link {
     font-size: 2.2rem;
   }
 }
@@ -248,22 +248,25 @@ section {
         -ms-flex-align: center;
             align-items: center;
   }
-  .main-navbar .nav__list {
+  .main-navbar .main-navbar__nav .nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .main-navbar .nav__link {
+  .main-navbar .main-navbar__nav .nav__list .nav__item {
+    position: relative;
+  }
+  .main-navbar .main-navbar__nav .nav__list .nav__item .nav__link {
     text-transform: uppercase;
     font-size: 1.5rem;
     padding: 5px;
     -webkit-transition: .3s;
     transition: .3s;
   }
-  .main-navbar .nav__item {
-    position: relative;
+  .main-navbar .main-navbar__nav .nav__list .nav__item .nav__link:hover {
+    color: #F95C59;
   }
-  .main-navbar .nav__item:after {
+  .main-navbar .main-navbar__nav .nav__list .nav__item:after {
     content: '';
     display: block;
     position: absolute;
@@ -275,11 +278,8 @@ section {
     -webkit-transition: .3s;
     transition: .3s;
   }
-  .main-navbar .nav__item:hover:after {
+  .main-navbar .main-navbar__nav .nav__list .nav__item:hover:after {
     width: 100%;
-  }
-  .main-navbar .nav__link:hover {
-    color: #F95C59;
   }
 }
 /*# sourceMappingURL=style.css.map */
