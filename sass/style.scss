@@ -1,0 +1,14 @@
+// Simple reset CSS
+@import 'helpers/reset';
+//Main CSS styles
+@import 'sections/_main';
+
+//Helpers
+@import 'helpers/_variables';
+@import 'helpers/mixins';
+@import 'helpers/components';
+
+
+//Sections
+@import 'sections/aside';
+@import 'sections/_nav';
