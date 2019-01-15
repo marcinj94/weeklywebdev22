@@ -11,6 +11,7 @@ btn.addEventListener('click', function () {
     });
     nav.classList.toggle('active');
     navList.classList.toggle('active');
+    btn.classList.toggle('active');
 
 });
 
@@ -21,5 +22,6 @@ navItems.forEach(navItem => {
         });
         nav.classList.remove('active');
         navList.classList.remove('active');
+        btn.classList.remove('active');
     });
 })

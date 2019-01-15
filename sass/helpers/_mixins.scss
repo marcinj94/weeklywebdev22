@@ -4,3 +4,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin btn {
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+@mixin btn-main {
+    font-size: 18px;
+    padding: 20px 30px;
+    background-color: $light-blue;
+}
