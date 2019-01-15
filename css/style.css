@@ -428,4 +428,64 @@ body {
             transform: rotate(90deg);
   }
 }
+
+.services {
+  background-image: -webkit-gradient(linear, left top, right top, from(#1975D1), color-stop(50%, #1975D1), color-stop(50%, #03A9F3));
+  background-image: linear-gradient(to right, #1975D1, #1975D1 50%, #03A9F3 50%);
+  color: white;
+  text-transform: uppercase;
+}
+
+.services .services__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.services .services__list .service__item {
+  list-style-type: none;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.services .services__list .service__item:nth-child(odd) {
+  background-color: #1975D1;
+}
+
+.services .services__list .service__item:nth-child(even) {
+  background-color: #03A9F3;
+}
+
+.services .services__list .service__item .service__icon {
+  font-size: 40px;
+  padding: 40px 0 0 0;
+}
+
+.services .services__list .service__item .service__description {
+  padding: 20px;
+}
+
+@media (min-width: 600px) {
+  .services .services__list .service__item {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+}
+
+@media (min-width: 900px) {
+  .services .services__list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
 /*# sourceMappingURL=style.css.map */
