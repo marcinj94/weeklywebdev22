@@ -488,4 +488,102 @@ body {
     margin: 0 auto;
   }
 }
+
+.about .about__list {
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about .about__list .about__item {
+  list-style-type: none;
+  margin: 5px;
+  display: inline-block;
+  position: relative;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.about .about__list .about__item .about__item-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #F95C59;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+.about .about__list .about__item .about__item-icon .about__icon {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 14px;
+}
+
+.about .about__list .about__item .about__text-content {
+  padding: 0 10px 10px 40px;
+}
+
+.about .about__list .about__item .about__text-content .about__title {
+  font-size: 18px;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.about .about__list .about__item .about__text-content .about__description {
+  padding-top: 8px;
+  font-size: 11px;
+  color: gray;
+  line-height: 18px;
+}
+
+@media (min-width: 500px) {
+  .about .about__list .about__item {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+  }
+}
+
+@media (min-width: 600px) {
+  .about .about__list .about__item {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+}
+
+@media (min-width: 812px) {
+  .about .about__list {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about .about__list .about__item {
+    padding: 20px;
+  }
+  .about .about__list .about__item .about__item-icon {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    left: 20px;
+  }
+  .about .about__list .about__item .about__item-icon .about__icon {
+    font-size: 20px;
+  }
+  .about .about__list .about__item .about__text-content {
+    padding: 0 10px 10px 50px;
+  }
+  .about .about__list .about__item .about__text-content .about__title {
+    font-size: 22px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
