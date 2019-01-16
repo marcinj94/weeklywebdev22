@@ -866,4 +866,36 @@ body {
     opacity: 1;
   }
 }
+
+.portfolio .btn {
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 3px;
+  margin: 50px 0 100px 0;
+}
+
+.portfolio .btn-main {
+  font-size: 18px;
+  padding: 20px 30px;
+  background-color: #03A9F3;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.portfolio .btn-main__icon {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+@media (min-width: 1200px) {
+  .portfolio .btn-main:hover {
+    background-color: #F95C59;
+  }
+  .portfolio .btn-main:hover .btn-main__icon {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
 /*# sourceMappingURL=style.css.map */
