@@ -1,3 +1,4 @@
+// Menu
 btnItems = document.querySelectorAll('.hamburger__item');
 navItems = document.querySelectorAll('.nav__item');
 
@@ -24,4 +25,32 @@ navItems.forEach(navItem => {
         navList.classList.remove('active');
         btn.classList.remove('active');
     });
-})
+});
+
+
+//Portfolio
+
+portfolioBtns = document.querySelectorAll('.portfolio__btn');
+portfolioProjects = document.querySelectorAll('.portfolio__project')
+
+function userChoice() {
+    portfolioBtns.forEach(portfolioBtn => {
+        portfolioBtn.classList.remove('active');
+
+    });
+
+    this.classList.add('active');
+
+    portfolioProjects.forEach(portfolioProject => {
+        portfolioProject.classList.remove('disable');
+        if (this.dataset.group) {
+            if (portfolioProject.dataset.group != this.dataset.group) {
+                portfolioProject.classList.add('disable');
+            }
+        }
+    });
+};
+
+portfolioBtns.forEach(portfolioBtn => {
+    portfolioBtn.addEventListener('click', userChoice);
+});
