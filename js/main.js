@@ -68,4 +68,39 @@ window.addEventListener('scroll', function () {
     if (scrollValue - 50 > factSectionFromTop) {
         factList.classList.add('active');
     }
-})
+});
+
+
+//Clients section
+
+clientImages = document.querySelectorAll('.client__photo');
+clientTitle = document.querySelector('.client__title');
+clientDescription = document.querySelector('.client__description');
+clientQuotes = document.querySelectorAll('.client__quote');
+
+function clientChoice() {
+    clientImages.forEach(clientImage => {
+        clientImage.classList.remove('active');
+    });
+    clientQuotes.forEach(clientQuote => {
+        clientQuote.classList.remove('active');
+        if (clientQuote.dataset.client == this.dataset.client) {
+            clientQuote.classList.add('active');
+        }
+    });
+
+    this.classList.add('active');
+    if (this.dataset.client == '1') {
+        clientTitle.textContent = 'Anthony Green';
+        clientDescription.textContent = 'Web developer';
+    } else if (this.dataset.client == '2') {
+        clientTitle.textContent = 'Kyle Roberts';
+        clientDescription.textContent = 'Company CEO';
+    } else if (this.dataset.client == '3') {
+        clientTitle.textContent = 'Bella Morgan';
+        clientDescription.textContent = 'Project manager';
+    }
+}
+clientImages.forEach(clientImage => {
+    clientImage.addEventListener('click', clientChoice);
+});

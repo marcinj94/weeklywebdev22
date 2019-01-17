@@ -1141,8 +1141,135 @@ body {
   }
 }
 
-.omg {
-  background-color: gray;
-  height: 300vh;
+.clients {
+  background-color: #1975D1;
+  text-align: center;
+  padding-bottom: 80px;
+  color: white;
+}
+
+.clients .clients__title {
+  padding: 0 5px;
+  padding-top: 30px;
+  text-transform: uppercase;
+  font-size: 3.1rem;
+}
+
+@media (min-width: 700px) {
+  .clients .clients__title {
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .clients .clients__title {
+    font-size: 4rem;
+    padding-top: 120px;
+  }
+}
+
+.clients .clients__description {
+  padding: 10px;
+  color: #BCBCBC;
+  font-size: 1.4rem;
+  position: relative;
+  color: white;
+}
+
+.clients .clients__description:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: #03A9F3;
+}
+
+.clients .clients__description:after {
+  background-color: white;
+}
+
+.clients .clients__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 500px;
+  margin: 40px auto 20px;
+}
+
+.clients .clients__photo .client__photo {
+  border-radius: 50%;
+  border: 5px solid #03A9F3;
+  overflow: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.clients .clients__photo .client__photo .client__img {
+  width: 100%;
+  height: 100%;
+}
+
+.clients .clients__photo .client__photo.active {
+  border: 5px solid white;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media (min-width: 1200px) {
+  .clients .clients__photo .client__photo:hover {
+    border: 5px solid white;
+  }
+}
+
+.clients .clients__photo .client__title,
+.clients .clients__photo .client__description {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.clients .clients__photo .client__title {
+  padding: 20px 0 5px;
+  font-size: 2.8rem;
+}
+
+.clients .clients__photo .client__description {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.clients .clients__quotes {
+  padding: 10px;
+  margin: 10px 20px;
+  font-size: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.clients .clients__quotes .client__quote {
+  display: none;
+}
+
+.clients .clients__quotes .client__quote.active {
+  display: block;
+}
+
+@media (min-width: 750px) {
+  .clients .clients__quotes {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    line-height: 26px;
+    padding: 40px 50px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
