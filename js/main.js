@@ -54,3 +54,18 @@ function userChoice() {
 portfolioBtns.forEach(portfolioBtn => {
     portfolioBtn.addEventListener('click', userChoice);
 });
+
+
+//Fact section
+
+const factSection = document.querySelector('.fact');
+const factList = document.querySelector('.fact__list');
+const factSectionFromTop = factSection.offsetTop;
+
+window.addEventListener('scroll', function () {
+    let scrollValue = window.scrollY;
+    console.log(scrollValue);
+    if (scrollValue - 50 > factSectionFromTop) {
+        factList.classList.add('active');
+    }
+})

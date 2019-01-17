@@ -1,0 +1,57 @@
+.fact {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        opacity: 0;
+        transition: .5s;
+
+        &.active {
+            opacity: 1;
+        }
+
+        .fact__item {
+            list-style-type: none;
+            flex-basis: 80%;
+            // background-color: gray;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+
+            .fact__icon {
+                color: $red;
+                font-size: 30px;
+                padding-right: 10px;
+            }
+
+            .fact__number {
+                font-size: $font-biger;
+            }
+
+            .fact__title {
+                flex-basis: 100%;
+                font-size: $font-middle;
+                text-align: center;
+                padding-top: 10px;
+            }
+
+            @media(min-width: 500px) {
+                flex-basis: 40%;
+            }
+
+            @media(min-width: 1050px) {
+                flex-basis: 20%;
+            }
+        }
+    }
+}
+
+.omg {
+    background-color: gray;
+    height: 300vh;
+}
