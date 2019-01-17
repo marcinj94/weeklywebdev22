@@ -1461,8 +1461,123 @@ body {
   }
 }
 
-.next {
-  background-color: gray;
-  height: 300vh;
+.news .news__title {
+  text-align: center;
+  padding-top: 30px;
+  text-transform: uppercase;
+  font-size: 3.1rem;
+}
+
+@media (min-width: 700px) {
+  .news .news__title {
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .news .news__title {
+    font-size: 4rem;
+    padding-top: 120px;
+  }
+}
+
+.news .news__description {
+  text-align: center;
+  padding: 10px;
+  color: #BCBCBC;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.news .news__description:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: #03A9F3;
+}
+
+.news .news__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 30px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news .news__list .news__item {
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  background-color: white;
+  margin: 10px;
+  max-width: 350px;
+  -webkit-box-shadow: 0 0 4px #e8e8e8;
+          box-shadow: 0 0 4px #e8e8e8;
+  -webkit-transition: .5s;
+  transition: .5s;
+  position: relative;
+}
+
+.news .news__list .news__item .img__wrapper {
+  position: relative;
+}
+
+.news .news__list .news__item .img__wrapper .news__img {
+  width: 100%;
+}
+
+.news .news__list .news__item .img__wrapper .btn {
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.news .news__list .news__item .img__wrapper .btn-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 14px;
+  background-color: #03A9F3;
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+@media (min-width: 1200px) {
+  .news .news__list .news__item .img__wrapper .btn-circle:hover {
+    background-color: #F95C59;
+  }
+}
+
+.news .news__list .news__item .article__title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 15px 10px 5px;
+}
+
+.news .news__list .news__item .article__description {
+  font-size: 1.1rem;
+  padding: 0 10px 20px 10px;
+}
+
+.news .news__list .news__item .article__content {
+  font-size: 1.4rem;
+  padding: 5px 20px 15px 20px;
+  line-height: 18px;
+  color: gray;
 }
 /*# sourceMappingURL=style.css.map */
