@@ -50,13 +50,13 @@
                     <a href="#portfolio" class="nav__link">Portfolio</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link">Pricing</a>
+                    <a href="#price" class="nav__link">Pricing</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link">Blog</a>
+                    <a href="#news" class="nav__link">Blog</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link">Contact Us</a>
+                    <a href="#newsletter" class="nav__link">Contact Us</a>
                 </li>
                 <li class="nav__item">
                     <a href="#" class="nav__link"><i class="fas fa-search"></i></a>
@@ -70,7 +70,7 @@
             <h1 class="header__title"><span class="header__title--color">Smiley</span> Creative MULTI-PURPOSE</h1>
             <p class="header__description">Primis vocent comprehensam an vix, qui ferri alterum appareat id. </p>
             <button class="btn btn-main">Learn more <i class="fas fa-arrow-right btn-main__icon"></i></button>
-            <a href="#services" class="header__scroll"></a>
+            <button class="header__scroll"></button>
         </div>
     </header>
 
@@ -211,7 +211,7 @@
         <p class="video__title">Front end development</p>
         <p class="video__title">Graphic Design</p>
         <p class="video__title">Pixel Perfect web</p>
-        <video class="video__item" src="video/video3.mp4" autoplay loop playsinline muted></video>
+        <video class="video__item" src="video/video.mp4" autoplay loop playsinline muted></video>
     </section>
 
     <section class="portfolio" id="portfolio">
@@ -327,7 +327,7 @@
         <button class="btn btn-main">Learn more <i class="fas fa-arrow-right btn-main__icon"></i></button>
     </section>
 
-    <section class="team">
+    <section class="team" id="team">
         <h2 class="team__title">The team</h2>
         <p class="team__description">Lorem ipsum dolor sit amet consecte adip scn elit sit secte</p>
         <div class="team__persons">
@@ -401,7 +401,7 @@
         </ul>
     </section>
 
-    <section class="clients">
+    <section class="clients" id="clients">
         <h2 class="clients__title">What our clients say</h2>
         <p class="clients__description">Lorem ipsum dolor sit amet consecte adip elit sit secte</p>
         <div class="clients__photo">
@@ -437,7 +437,7 @@
         </div>
     </section>
 
-    <section class="companies">
+    <section class="companies" id="companies">
         <ul class="companies__list">
             <li class="company__item">
                 <img src="img/companies/company1.png" alt="Company first">
@@ -457,7 +457,7 @@
         </ul>
     </section>
 
-    <section class="price">
+    <section class="price" id="price">
         <h2 class="price__title">Pricing Table</h2>
         <p class="price__description">Lorem ipsum dolor sit amet consecte adip elit sit secte</p>
         <div class="price__list">
@@ -533,7 +533,7 @@
         </div>
     </section>
 
-    <section class="news">
+    <section class="news" id="news">
         <h2 class="news__title">Latest news</h2>
         <p class="news__description">Lorem ipsum dolor sit amet consecte adip scn elit sit secte</p>
         <div class="news__list">
@@ -573,7 +573,7 @@
         </div>
     </section>
 
-    <section class="newsletter">
+    <section class="newsletter" id="newsletter">
         <h1 class="newsletter__title">Get latest updates from us</h1>
         <p class="newsletter__description">Lorem ipsum dolor sit amet consecte adip scn elit sit secte olor sit amet
             consecte adip scn </p>
@@ -601,7 +601,12 @@
         </section>
     </footer>
 
+    <button href="" class="up-btn">
+        <i class="fas fa-angle-double-up up-btn__icon"></i>
+    </button>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
 

@@ -1,7 +1,6 @@
 // Menu
 btnItems = document.querySelectorAll('.hamburger__item');
 navItems = document.querySelectorAll('.nav__item');
-
 nav = document.querySelector('.main-navbar__nav');
 navList = document.querySelector('.nav__list');
 btn = document.querySelector('.main-navbar__hamburger');
@@ -36,7 +35,6 @@ portfolioProjects = document.querySelectorAll('.portfolio__project')
 function userChoice() {
     portfolioBtns.forEach(portfolioBtn => {
         portfolioBtn.classList.remove('active');
-
     });
 
     this.classList.add('active');
@@ -55,16 +53,13 @@ portfolioBtns.forEach(portfolioBtn => {
     portfolioBtn.addEventListener('click', userChoice);
 });
 
-
-//Fact section
-
+// Fact section
 const factSection = document.querySelector('.fact');
 const factList = document.querySelector('.fact__list');
 const factSectionFromTop = factSection.offsetTop;
 
 window.addEventListener('scroll', function () {
     let scrollValue = window.scrollY;
-    console.log(scrollValue);
     if (scrollValue - 50 > factSectionFromTop) {
         factList.classList.add('active');
     }
@@ -72,7 +67,6 @@ window.addEventListener('scroll', function () {
 
 
 //Clients section
-
 clientImages = document.querySelectorAll('.client__photo');
 clientTitle = document.querySelector('.client__title');
 clientDescription = document.querySelector('.client__description');
@@ -104,3 +98,39 @@ function clientChoice() {
 clientImages.forEach(clientImage => {
     clientImage.addEventListener('click', clientChoice);
 });
+
+
+// jQuery
+
+
+//smooth scroll nav items
+$('.nav__link').on('click', function () {
+    const menuItem = $(this).attr('href');
+    $('body, html').animate({
+        scrollTop: $(menuItem).offset().top
+    }, 3000);
+});
+
+// show|hide .up-btn
+const $upBtn = $('.up-btn');
+
+$(window).on('scroll', function () {
+    const scrollValue = $(window).scrollTop();
+    return (scrollValue > 0) ? $upBtn.addClass('active') : $upBtn.removeClass('active')
+})
+
+
+//smooth scroll .up-btn to top
+$upBtn.on('click', function () {
+    $('body, html').animate({
+        scrollTop: $('body').offset().top
+    }, 2000);
+});
+
+//smooth scroll in header hto next section
+$('.header__scroll').on('click', function () {
+    $('body, html').animate({
+        scrollTop: $('.services').offset().top
+    }, 1000);
+});
+

@@ -339,6 +339,8 @@ body {
   height: 55px;
   border: 1px solid white;
   border-radius: 12px;
+  background-color: transparent;
+  cursor: pointer;
   position: absolute;
   left: 50%;
   bottom: 5%;
@@ -505,7 +507,7 @@ body {
 
 .about .about__list .about__item {
   list-style-type: none;
-  margin: 5px;
+  margin: 10px;
   display: inline-block;
   position: relative;
   -ms-flex-preferred-size: 100%;
@@ -1736,5 +1738,54 @@ body {
   text-align: center;
   font-size: 1.5rem;
   padding: 20px;
+}
+
+.up-btn {
+  display: none;
+}
+
+.up-btn.active {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.up-btn .up-btn__icon {
+  color: #F95C59;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-animation: upBtnAnimation infinite 6s;
+          animation: upBtnAnimation infinite 6s;
+}
+
+@-webkit-keyframes upBtnAnimation {
+  0% {
+    color: #F95C59;
+  }
+  50% {
+    color: #1975D1;
+  }
+  100% {
+    color: #F95C59;
+  }
+}
+
+@keyframes upBtnAnimation {
+  0% {
+    color: #F95C59;
+  }
+  50% {
+    color: #1975D1;
+  }
+  100% {
+    color: #F95C59;
+  }
 }
 /*# sourceMappingURL=style.css.map */
