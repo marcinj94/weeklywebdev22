@@ -6,8 +6,6 @@
 //Helpers
 @import 'helpers/_variables';
 @import 'helpers/mixins';
-@import 'helpers/components';
-
 
 //Sections
 @import 'sections/aside';
@@ -23,4 +21,5 @@
 @import 'sections/companies';
 @import 'sections/price';
 @import 'sections/news';
-@import 'sections/newsletter'
+@import 'sections/newsletter';
+@import 'sections/footer';
