@@ -119,7 +119,6 @@ $(window).on('scroll', function () {
     return (scrollValue > 0) ? $upBtn.addClass('active') : $upBtn.removeClass('active')
 })
 
-
 //smooth scroll .up-btn to top
 $upBtn.on('click', function () {
     $('body, html').animate({
