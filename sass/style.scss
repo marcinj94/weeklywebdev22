@@ -1,26 +1,26 @@
 // Simple reset CSS
-@import 'helpers/reset';
+@import "helpers/reset";
 //Main CSS styles
-@import 'sections/_main';
+@import "sections/_main";
 
 //Helpers
-@import 'helpers/_variables';
-@import 'helpers/mixins';
+@import "helpers/_variables";
+@import "helpers/mixins";
 
 //Sections
-@import 'sections/aside';
-@import 'sections/_nav';
-@import 'sections/header';
-@import 'sections/services';
-@import 'sections/about';
-@import 'sections/video';
-@import 'sections/portfolio';
-@import 'sections/team';
-@import 'sections/fact';
-@import 'sections/clients';
-@import 'sections/companies';
-@import 'sections/price';
-@import 'sections/news';
-@import 'sections/newsletter';
-@import 'sections/footer';
-@import 'sections/upBtn';
+@import "sections/aside";
+@import "sections/_nav";
+@import "sections/header";
+@import "sections/services";
+@import "sections/about";
+@import "sections/video";
+@import "sections/portfolio";
+@import "sections/team";
+@import "sections/fact";
+@import "sections/clients";
+@import "sections/companies";
+@import "sections/price";
+@import "sections/news";
+@import "sections/newsletter";
+@import "sections/footer";
+@import "sections/upBtn";

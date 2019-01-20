@@ -1,55 +1,54 @@
 @mixin centerAbsolute {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin btn {
-    color: white;
-    border: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 3px;
-
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 3px;
 }
 
 @mixin btn-main {
-    font-size: 18px;
-    padding: 20px 30px;
-    background-color: $light-blue;
+  font-size: 18px;
+  padding: 20px 30px;
+  background-color: $light-blue;
 }
 
 @mixin section-title {
-    padding-top: 30px;
-    text-transform: uppercase;
-    font-size: $font-title-small;
+  padding-top: 30px;
+  text-transform: uppercase;
+  font-size: $font-title-small;
 
-    @media(min-width: 700px) {
-        padding-top: 80px;
-    }
+  @media (min-width: 700px) {
+    padding-top: 80px;
+  }
 
-    @media(min-width: 1200px) {
-        font-size: $font-title-big;
-        padding-top: 120px;
-    }
+  @media (min-width: 1200px) {
+    font-size: $font-title-big;
+    padding-top: 120px;
+  }
 }
 
 @mixin section-description {
-    padding: 10px;
-    color: #BCBCBC;
-    font-size: $font-description-small;
-    position: relative;
+  padding: 10px;
+  color: #bcbcbc;
+  font-size: $font-description-small;
+  position: relative;
 
-    &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40px;
-        height: 3px;
-        background-color: $light-blue;
-    }
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background-color: $light-blue;
+  }
 }

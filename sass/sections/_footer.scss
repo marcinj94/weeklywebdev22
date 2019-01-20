@@ -1,54 +1,51 @@
 .footer {
-    text-align: center;
+  text-align: center;
 
-    .social__footer {
-        background-color: $dark-blue;
-        color: white;
+  .social__footer {
+    background-color: $dark-blue;
+    color: white;
 
-        .social__description {
-            font-size: 15px;
-            padding: 50px 10px 30px 10px;
-        }
-
-        .socials__wrapper {
-            // display: flex;
-            // justify-content: space-around;
-
-            .social__link {
-                display: inline-block;
-                width: 30px;
-                height: 30px;
-                color: $dark-blue;
-                background-color: white;
-                position: relative;
-                border-radius: 50%;
-                margin: 0px 10px 50px 10px;
-                transition: .3s;
-
-                .social__icon {
-                    @include centerAbsolute;
-
-                    font-size: 1.6rem;
-                }
-
-                @media(min-width: 1200px) {
-                    &:hover {
-                        background-color: $red;
-                        color: white;
-                    }
-                }
-            }
-        }
+    .social__description {
+      font-size: 15px;
+      padding: 50px 10px 30px 10px;
     }
 
-    .author__footer {
-        background-color: #222;
-        color: white;
+    .socials__wrapper {
+      .social__link {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        color: $dark-blue;
+        background-color: white;
+        position: relative;
+        border-radius: 50%;
+        margin: 0px 10px 50px 10px;
+        transition: 0.3s;
 
-        .author__description {
-            text-align: center;
-            font-size: 1.5rem;
-            padding: 20px;
+        .social__icon {
+          @include centerAbsolute;
+
+          font-size: 1.6rem;
         }
+
+        @media (min-width: 1200px) {
+          &:hover {
+            background-color: $red;
+            color: white;
+          }
+        }
+      }
     }
+  }
+
+  .author__footer {
+    background-color: #222;
+    color: white;
+
+    .author__description {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 20px;
+    }
+  }
 }

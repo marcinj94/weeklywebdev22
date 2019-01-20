@@ -1,36 +1,35 @@
 .up-btn {
+  display: none;
 
-    display: none;
+  &.active {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 4rem;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: 0.3s;
+  }
 
-    &.active {
-        display: block;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        font-size: 4rem;
-        cursor: pointer;
-        border: none;
-        background-color: transparent;
-        transition: .3s;
+  .up-btn__icon {
+    color: $red;
+    transition: 0.3s;
+    animation: upBtnAnimation infinite 6s;
+  }
+
+  @keyframes upBtnAnimation {
+    0% {
+      color: $red;
     }
 
-    .up-btn__icon {
-        color: $red;
-        transition: .3s;
-        animation: upBtnAnimation infinite 6s
+    50% {
+      color: $dark-blue;
     }
 
-    @keyframes upBtnAnimation {
-        0% {
-            color: $red;
-        }
-
-        50% {
-            color: $dark-blue
-        }
-
-        100% {
-            color: $red;
-        }
+    100% {
+      color: $red;
     }
+  }
 }
